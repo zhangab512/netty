@@ -93,7 +93,7 @@ public class NioClient {
         // log
         System.out.println("接受新的 Channel");
         // 注册 Client Socket Channel 到 Selector
-        clientSocketChannel.register(selector, SelectionKey.OP_READ, responseQueue);
+      //  clientSocketChannel.register(selector, SelectionKey.OP_READ, responseQueue);
         // 标记为已连接
         connected.countDown();
     }
