@@ -58,7 +58,6 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
         if (true) { // 调试打印
             ByteBuf buf = (ByteBuf) msg;
             int readerIndex = buf.readerIndex();
-
             byte[] bytes = new byte[buf.readableBytes()];
             buf.readBytes(bytes);
             System.out.println("接收到消息：" + new String(bytes));

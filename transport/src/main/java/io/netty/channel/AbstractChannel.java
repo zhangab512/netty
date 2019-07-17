@@ -597,6 +597,7 @@ public abstract class AbstractChannel extends DefaultAttributeMap implements Cha
         public final void bind(final SocketAddress localAddress, final ChannelPromise promise) {
             // 判断是否在 EventLoop 的线程中。
             assertEventLoop();
+            System.out.println("start to register selectionkey .."+eventLoop.inEventLoop());
 
             if (!promise.setUncancellable() || !ensureOpen(promise)) {
                 return;
